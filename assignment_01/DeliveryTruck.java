@@ -5,11 +5,14 @@ public class DeliveryTruck
    private Mail [] mailbag = new Mail[10];
    private String horn = "beep beep";
 
+   //constructor
    DeliveryTruck(){}
+   // for fun
    public void honkHorn()
    {
        System.out.println(horn);
    }
+   // load truck 
    public void load (Mail mail)
    {
        for(int i = 0; i < this.mailbag.length; i++)
@@ -26,6 +29,19 @@ public class DeliveryTruck
             }
             
        }
+   }
+   //return amount of mail
+   public int getAmtMail()
+   {
+      int numItems = 0;
+      for(int i =0; i < this.mailbag.length; i++)
+      {
+          if(this.mailbag[i] !=  null)
+          {
+              numItems ++;
+          }
+      } 
+      return numItems;
    }
 }
 
